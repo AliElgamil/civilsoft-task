@@ -1,0 +1,17 @@
+@import "varSass/var.scss";
+body {
+  background-color: #f9f9f9 !important;
+}
+
+a {
+  &,
+  &:hover {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+}
+
+.head_section {
+  background-color: $headSectionBg;
+  border-bottom: 2px solid $borderColor;
+}

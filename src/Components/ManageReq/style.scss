@@ -1,0 +1,117 @@
+@import "../../varSass/var.scss";
+
+.manage_req {
+  min-height: 555px;
+  margin: 0.5rem 1rem;
+  border: 1px solid #b5b5b5;
+  background-color: #fff;
+  box-shadow: 3px 4px 10px rgb(0 0 0 /10%);
+  border-radius: 0.3rem;
+  overflow: hidden;
+
+  .form_filter {
+    max-width: 500px;
+    width: 100%;
+    grid-template-columns: auto 1fr auto;
+
+    .icon {
+      color: $mainColor;
+      padding: 0rem 0.3rem;
+      border-radius: 0.5rem;
+      border: 1px solid $borderColor;
+      font-size: 1.3rem;
+
+      &.icon_search {
+        background-color: $mainColor;
+        color: #fff;
+      }
+    }
+
+    .input {
+      border: 1px solid $borderColor;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      border-radius: 0.3rem;
+      color: $textColor;
+      input {
+        border: 0;
+        outline: 0;
+        color: inherit;
+      }
+
+      button {
+        background-color: transparent;
+        border: 0;
+        color: inherit;
+      }
+    }
+  }
+
+  .list-option {
+    .option-item {
+      font-size: 1rem;
+      padding: 0 0.7rem;
+      border-left: 2px solid $textColor;
+      border-image: linear-gradient(
+          transparent,
+          rgba(36, 41, 143, 0.227),
+          transparent
+        )
+        1;
+      color: $mainColor;
+      cursor: pointer;
+
+      .border-icon {
+        border: 1px solid $mainColor;
+        border-radius: 0.4rem;
+        padding: 0 0.2rem;
+      }
+    }
+  }
+
+  .bg-rl {
+    background-color: $rl !important;
+  }
+  .bg-ua {
+    background-color: $ua !important;
+  }
+  .bg-fla {
+    background-color: $fla !important;
+  }
+  .bg-at {
+    background-color: $at !important;
+  }
+  .bg-ct {
+    background-color: $ct !important;
+  }
+  .bg-fdt {
+    background-color: $fdt !important;
+  }
+  .bg-r {
+    background-color: $r !important;
+  }
+  .bg-h {
+    background-color: $h !important;
+  }
+  .bg-rah {
+    background-color: $rah !important;
+  }
+  .bg-elr {
+    background-color: $elr !important;
+  }
+
+  .symptoms_list {
+    .list-item {
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      span:first-child {
+        width: 15px;
+        height: 15px;
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,351 @@
+@import "../../varSass/var.scss";
+
+.request {
+  margin: 0.5rem 1rem;
+  background-color: #fff;
+  border: 2px solid $headSectionBg;
+  //   border-radius: 0.2rem;
+  min-height: 550px;
+  .gap {
+    row-gap: 1rem;
+  }
+  .head_section {
+    background-color: $headSectionBg;
+    border-color: #fff;
+    i {
+      color: $headSectionBg;
+    }
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  select,
+  textarea {
+    border: 2px solid $tableHead;
+  }
+  .head_box {
+    background-color: $headSectionBg;
+    padding: 0.3rem 1rem;
+
+    .icon {
+      padding-right: 1rem;
+      border-right: 2px solid $borderColor;
+    }
+
+    .form_filter {
+      background-color: #fff;
+      border: 2px solid $borderColor;
+      border-radius: 0.2rem;
+      display: flex;
+      width: 350px;
+      position: relative;
+
+      .input {
+        flex-grow: 1;
+        position: relative;
+        display: flex;
+      }
+
+      .list_emp {
+        position: absolute;
+        width: 100%;
+        height: fit-content;
+        max-height: 240px;
+        overflow-y: auto;
+        top: 100%;
+        transform: translateY(2px);
+        left: 0;
+        background-color: #fff;
+        z-index: 9999;
+
+        &.hide {
+          display: none;
+        }
+
+        &::-webkit-scrollbar {
+          width: 5px;
+        }
+        &::-webkit-scrollbar-track {
+          background: #f1f1f1;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: #888;
+        }
+        &::-webkit-scrollbar-thumb:hover {
+          background: #555;
+        }
+        .list_item {
+          display: flex;
+          cursor: pointer;
+          .image {
+            max-width: 60px;
+          }
+          .info {
+            padding: 1rem 0.5rem;
+          }
+        }
+      }
+
+      input {
+        border: 0;
+        outline: 0;
+        padding: 0 0.5rem;
+        flex-grow: 1;
+        border-color: $tableHead;
+      }
+
+      button {
+        border: 0;
+        background-color: transparent;
+        color: $headSectionBg;
+        font-size: 0.7rem;
+      }
+    }
+  }
+
+  .info_details {
+    margin-top: 1rem;
+    .image {
+      max-width: 150px;
+    }
+
+    .info_list {
+      flex-grow: 1;
+      background-color: $tableHead;
+      margin: 0;
+      padding: 1rem;
+      border-left: 4px solid $mainColor;
+
+      li {
+        display: flex;
+        gap: 30px;
+        font-size: 0.8rem;
+        width: 100%;
+        flex-grow: 1;
+        span:first-child {
+          text-align: right;
+          width: 105px;
+        }
+        i {
+          margin: 0 0.4rem;
+        }
+      }
+    }
+  }
+
+  .color-danger {
+    color: #dc3545;
+  }
+
+  .error {
+    position: fixed;
+    inset: 0;
+    background: rgb(0 0 0 / 30%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+
+    P {
+      background-color: #fff;
+      border-radius: 0.5rem;
+      width: 100%;
+      max-width: 500px;
+      padding: 3rem 1rem;
+      text-align: center;
+
+      i {
+        display: block;
+        font-size: 4rem;
+      }
+    }
+  }
+
+  .leave_details {
+    background-color: $tableHead;
+    h6,
+    p,
+    li {
+      font-size: 0.8rem;
+    }
+
+    p {
+      padding-left: 0.5rem;
+    }
+
+    .list {
+      margin-bottom: 0.5rem;
+      padding-left: 1rem;
+
+      .list-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem;
+        border-bottom: 2px solid #fff;
+
+        border-image: linear-gradient(transparent, #fff, transparent) 2;
+
+        span:last-child {
+          width: 100px;
+        }
+      }
+    }
+  }
+
+  .req_form {
+    position: relative;
+    border: 2px solid $tableHead;
+    border-radius: 0.2rem;
+    margin-top: 1rem;
+    padding: 2rem 1rem;
+
+    .form_container {
+      position: relative;
+      border: 2px solid $tableHead;
+      border-radius: 0.2rem;
+      padding: 1rem;
+      .title_form {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-65%) translateX(10px);
+        margin: 0;
+        background-color: #fff;
+        padding: 0 0.2rem;
+      }
+    }
+
+    .input {
+      span {
+        display: inline-block;
+        width: 215px;
+        text-align: right;
+      }
+
+      input[type="radio"] {
+        visibility: hidden;
+      }
+
+      input[type="radio"] + label {
+        position: relative;
+      }
+
+      input[type="radio"] + label::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        border: 2px solid $borderColor;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 0.5rem;
+      }
+
+      input[type="radio"]:checked + label::after {
+        content: "";
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        background-color: #666666;
+        border-radius: 50%;
+        top: 6px;
+        left: 3px;
+      }
+    }
+  }
+
+  .box {
+    border: 2px solid $headSectionBg;
+    height: 100%;
+    .input {
+      min-width: 300px;
+      padding: 1rem 3rem;
+
+      textarea {
+        resize: none;
+      }
+      input,
+      select {
+        width: 100%;
+        outline: 0;
+      }
+
+      label {
+        width: 150px;
+        text-align: right;
+      }
+
+      .input-container {
+        border: 2px solid $tableHead;
+        border-right-width: 10px;
+        border-radius: 0.3rem;
+        width: 80%;
+        height: 78px;
+        padding: 0.5rem 1rem;
+        input[type="file"] {
+          visibility: hidden;
+          display: none;
+        }
+
+        & + label {
+          cursor: pointer;
+          width: auto;
+          color: $mainColor;
+        }
+
+        & + label + p {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          color: $mainColor;
+          margin: 0;
+        }
+      }
+    }
+  }
+  .btn-group {
+    justify-content: center;
+    gap: 0.5rem;
+    .btn {
+      max-width: 100px;
+      border-radius: 0.3rem !important;
+      background-color: $mainColor;
+      color: #fff;
+
+      &.btn-cancel {
+        background-color: $headSectionBg;
+      }
+
+      &:hover {
+        border-color: transparent !important;
+      }
+    }
+  }
+
+  .leave_type {
+    margin: 1rem 0;
+
+    & > div:first-child {
+      background-color: #ddd;
+      padding: 1rem 0;
+      border-radius: 0.2rem;
+    }
+
+    .btn_add {
+      width: 150px;
+      text-align: center;
+      background-color: #ddd;
+      border-radius: 0 0 2rem 2rem;
+      padding: 0.5rem;
+
+      .btn {
+        border: 2px solid $mainColor;
+        padding: 0;
+        width: 30px;
+        height: 30px;
+        color: $mainColor;
+        border-radius: 50%;
+      }
+    }
+  }
+}

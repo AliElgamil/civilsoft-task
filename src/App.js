@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "./Components/Navbar/Navbar";
+import Footer from "./Components/Footer/Footer";
+import { Routes, Route } from "react-router-dom";
+import ManageReq from "./Components/ManageReq/ManageReq";
+import Request from "./Components/request/Request";
+import { createContext, useEffect, useState } from "react";
 
+export const RequestsContext = createContext(null);
 function App() {
+  const [requests, setRequests] = useState([]);
+  const req = JSON.parse(localStorage.getItem("req"));
+
+  useEffect(() => {
+    if (req === null) setRequests([]);
+    else setRequests(req);
+  }, []);
+  useEffect(() => {
+    localStorage.setItem("req", JSON.stringify(requests));
+  }, [requests]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <RequestsContext.Provider value={{ requests, setRequests }}>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<ManageReq />} />
+          <Route path="/request" element={<Request />} />
+        </Routes>
+        <Footer />
+      </RequestsContext.Provider>
     </div>
   );
 }

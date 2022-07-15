@@ -1,0 +1,117 @@
+[
+  {
+    "imgUrl": "./images/person.jpg",
+    "code": 1000,
+    "name": "laura anne eggleton",
+    "jobTitle": "general manager",
+    "salaryProfile": "general manager",
+    "joiningData": "3/4/2019",
+    "location": [
+      "Hotel indigo dubai downtown",
+      "Admin & General",
+      "Human Resources",
+      "Employee Relations"
+    ],
+    "startDate": "29/0/2022",
+    "endDate": "29/0/2022",
+    "actualDate": "29/0/2022",
+    "leaveType": ["annul leave with payroll"],
+    "reqType": "rl",
+    "unpaidLeaveTaken": 100,
+    "annualLeaveBalance": 10,
+    "extraDays": 9,
+    "edit": false
+  },
+  {
+    "imgUrl": "./images/person.jpg",
+    "code": 1001,
+    "name": "laura anne eggleton",
+    "jobTitle": "general manager",
+    "salaryProfile": "general manager",
+    "joiningData": "3/4/2019",
+    "location": [
+      "Hotel indigo dubai downtown",
+      "Admin & General",
+      "Human Resources",
+      "Employee Relations"
+    ],
+    "startDate": "29/0/2022",
+    "endDate": "29/0/2022",
+    "actualDate": "29/0/2022",
+    "leaveType": ["annul leave with payroll"],
+    "reqType": "rl",
+    "unpaidLeaveTaken": 100,
+    "annualLeaveBalance": 10,
+    "extraDays": 9,
+    "edit": false
+  },
+  {
+    "imgUrl": "./images/person.jpg",
+    "code": 1030,
+    "name": "Amali Prasadini Jayamanne",
+    "jobTitle": "Assistant Manager of Financ",
+    "salaryProfile": "Management",
+    "joiningData": "3/4/2019",
+    "location": [
+      "Hotel indigo dubai downtown",
+      "Admin & General",
+      "Human Resources",
+      "Employee Relations"
+    ],
+    "startDate": "29/0/2022",
+    "endDate": "29/0/2022",
+    "actualDate": "29/0/2022",
+    "leaveType": ["annul leave with payroll"],
+    "reqType": "rl",
+    "unpaidLeaveTaken": 100,
+    "annualLeaveBalance": 10,
+    "extraDays": 9,
+    "edit": false
+  },
+  {
+    "imgUrl": "./images/person.jpg",
+    "code": 1006,
+    "name": "neetu shamlal sajnani shamlal",
+    "jobTitle": "Director of Finance & Busine",
+    "salaryProfile": "Exective Comm",
+    "joiningData": "3/4/2019",
+    "location": [
+      "Hotel indigo dubai downtown",
+      "Admin & General",
+      "Human Resources",
+      "Employee Relations"
+    ],
+    "startDate": "29/0/2022",
+    "endDate": "29/0/2022",
+    "actualDate": "29/0/2022",
+    "leaveType": ["annul leave with payroll"],
+    "reqType": "rl",
+    "unpaidLeaveTaken": 100,
+    "annualLeaveBalance": 10,
+    "extraDays": 9,
+    "edit": false
+  },
+  {
+    "imgUrl": "./images/person.jpg",
+    "code": 1009,
+    "name": "Amila Udana Karunaratne",
+    "jobTitle": "Technology Manager",
+    "salaryProfile": "HOD",
+    "joiningData": "3/4/2019",
+    "location": [
+      "Hotel indigo dubai downtown",
+      "Admin & General",
+      "Human Resources",
+      "Employee Relations"
+    ],
+    "startDate": "29/0/2022",
+    "endDate": "29/0/2022",
+    "actualDate": "29/0/2022",
+    "leaveType": ["annul leave with payroll"],
+    "reqType": "rl",
+    "unpaidLeaveTaken": 100,
+    "annualLeaveBalance": 10,
+    "extraDays": 9,
+    "edit": false
+  }
+]
