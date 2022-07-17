@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./style.scss";
 import TableBody from "./TableBody/TableBody";
 export default function Table({ requests }) {
@@ -28,7 +28,7 @@ export default function Table({ requests }) {
             .map((req, ind) => <TableBody req={req} ind={ind} key={ind} />)
             .reverse()
         ) : (
-          <p className="lead text-center py-3">No requests right now</p>
+          <p className="lead text-center py-3">No requests </p>
         )}
       </div>
       {/* Body table */}

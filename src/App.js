@@ -5,9 +5,9 @@ import Footer from "./Components/Footer/Footer";
 import { Routes, Route } from "react-router-dom";
 import ManageReq from "./Components/ManageReq/ManageReq";
 import Request from "./Components/request/Request";
-import { createContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { Filter, RequestsContext } from "./Context/Context";
 
-export const RequestsContext = createContext(null);
 function App() {
   const [requests, setRequests] = useState([]);
   const req = JSON.parse(localStorage.getItem("req"));

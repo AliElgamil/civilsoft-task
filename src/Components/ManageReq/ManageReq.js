@@ -1,15 +1,18 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import FilterForm from "./FilterForm/FilterForm";
 import Table from "./Table/Table";
 import ToolsEdit from "./ToolsEdit/ToolsEdit";
 import "./style.scss";
-import { RequestsContext } from "../../App";
+import { RequestsContext, Filter } from "../../Context/Context";
 import Symptoms from "./Symptoms/Symptoms";
 
 export default function ManageReq() {
   const { requests } = useContext(RequestsContext);
   const [requestsFilter, setRequestsFilter] = useState(requests);
-  // console.log(requests);
+
+  useEffect(() => {
+    setRequestsFilter(requests);
+  }, [requests]);
 
   return (
     <div className="manage_req">
@@ -24,10 +27,8 @@ export default function ManageReq() {
 
       <div className="tools d-flex justify-content-lg-between justify-content-center align-items-center flex-wrap p-2 text-center  gap-3">
         <FilterForm setRequests={setRequestsFilter} />
-        <ToolsEdit
-          requests={!requestsFilter.length ? requests : requestsFilter}
-        />
-        <Table requests={!requestsFilter.length ? requests : requestsFilter} />
+        <ToolsEdit requests={!requestsFilter.length ? [] : requestsFilter} />
+        <Table requests={!requestsFilter.length ? [] : requestsFilter} />
         <Symptoms />
       </div>
     </div>

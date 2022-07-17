@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { RequestsContext } from "../../../App";
+import { RequestsContext } from "../../../Context/Context";
 export default function ToolsEdit() {
   const { requests, setRequests } = useContext(RequestsContext);
   const handleClickEdit = () => {
@@ -34,7 +34,14 @@ export default function ToolsEdit() {
   };
 
   const handleDelete = () => {
-    const req = requests.filter((reqV) => !reqV.select);
+    const req = requests.filter((reqV) =>
+      reqV.select
+        ? !requests.filter((item) => item.reqNum === reqV.reqNum).length > 0
+        : true
+    );
+
+    console.log(requests.filter((item) => item.reqNum === 4).length > 0);
+    console.log(req);
     setRequests(req);
   };
 

@@ -1,9 +1,9 @@
 import React, { useRef, useState, useContext, useEffect } from "react";
-import { RequestsContext } from "../../../../App";
+import { RequestsContext } from "../../../../Context/Context";
 import Color from "./Color";
 export default function TableBody({ req, ind }) {
   const { requests, setRequests } = useContext(RequestsContext);
-  const [select, setSelect] = useState(requests[ind].select);
+  const [select, setSelect] = useState(requests[ind]?.select);
   const handleClick = () => {
     requests[ind].select = !select;
     setSelect(!select);
@@ -45,7 +45,7 @@ export default function TableBody({ req, ind }) {
   const reqList = () => {
     return (
       <div
-        className={`table_row ${requests[ind].select ? "select" : null}`}
+        className={`table_row ${requests[ind]?.select ? "select" : null}`}
         onClick={() => handleClick()}
       >
         <div className={`table_cell bg-${req.reqType}`}></div>

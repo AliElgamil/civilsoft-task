@@ -5,7 +5,7 @@ import data from "./data/employes.json";
 import "./style.scss";
 import Filter from "./Filter";
 import { useNavigate } from "react-router-dom";
-import { RequestsContext } from "../../App";
+import { RequestsContext } from "../../Context/Context";
 
 export default function Request() {
   const [inputFileValue, setInputFileValue] = useState("");
@@ -164,7 +164,7 @@ export default function Request() {
         </div>
       ) : null}
 
-      <div className="row align-items-start p-3">
+      <div className="row align-items-start p-3 gap">
         <div className="col-lg-8">
           <div className="info">
             <div className="head_box d-flex gap-3">
@@ -403,7 +403,7 @@ export default function Request() {
                             disabled={!employee}
                           />
                         </div>
-                        <div className="input d-flex gap-3">
+                        <div className="input d-flex gap-3 ">
                           <label>Email</label>
                           <input
                             type="email"
@@ -413,7 +413,7 @@ export default function Request() {
                         </div>
                       </div>
                       <div className="col-lg-6">
-                        <div className="input d-flex gap-3">
+                        <div className="input d-flex gap-3 ">
                           <label>Contact No.</label>
                           <input
                             type="text"
@@ -428,7 +428,7 @@ export default function Request() {
               </div>
             </div>
 
-            <div className="row my-3">
+            <div className="row my-3 gap">
               <div className="col-lg-6">
                 <div className="box">
                   <div className="head_box">

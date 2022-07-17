@@ -10,7 +10,7 @@ export default function Navbar() {
             <i className="fa-solid fa-bars"></i>
           </a>
           <div className="image">
-            <img src="./images/logo.jpg" className="img-fluid" />
+            <img src="./images/logo.jpg" className="img-fluid" alt="logo" />
           </div>
           <a className="navbar-brand text-uppercase  pt-0" href="/">
             Civilsoft <span>Hcms</span>

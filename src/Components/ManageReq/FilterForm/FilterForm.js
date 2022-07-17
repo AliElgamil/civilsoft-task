@@ -1,6 +1,6 @@
 import React, { useContext, useRef, useState } from "react";
-import { RequestsContext } from "../../../App";
-export default function FilterForm({ setRequests }) {
+import { Filter, RequestsContext } from "../../../Context/Context";
+export default function FilterForm({ setRequests, setReq }) {
   const { requests } = useContext(RequestsContext);
   const [check, setCheck] = useState(true);
   const handleSubmit = (e) => {
@@ -9,9 +9,6 @@ export default function FilterForm({ setRequests }) {
 
   const inputSearch = useRef(null);
   const handleSearch = () => {
-    // let filter;
-    // clearTimeout(filter);
-    // filter = setTimeout(() => {
     const filterData = requests.filter(
       (req) =>
         req.code.toString().indexOf(inputSearch.current.value) !== -1 ||
@@ -21,7 +18,6 @@ export default function FilterForm({ setRequests }) {
 
     setCheck(!filterData.length);
     setRequests([...filterData]);
-    // }, 500);
   };
 
   return (

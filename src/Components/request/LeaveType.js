@@ -14,8 +14,8 @@ export default function LeaveType({ ind, setLeaveType, leaveType, employee }) {
   };
 
   return (
-    <div className="row">
-      <div className="col-lg-6 d-flex justify-content-center gap-3">
+    <div className="row gap-3 gap-sm-0">
+      <div className="col-lg-6 d-flex justify-content-center gap-3 flex-wrap">
         <label>{ind + 1}st Leave Type</label>
         <select
           ref={select}
@@ -29,7 +29,7 @@ export default function LeaveType({ ind, setLeaveType, leaveType, employee }) {
           <option>annul leave During reserve</option>
         </select>
       </div>
-      <div className="col-lg-6 d-flex justify-content-center gap-3">
+      <div className="col-lg-6 d-flex justify-content-center gap-3 flex-wrap">
         <label>No. of Days</label>
         <input
           type="text"
